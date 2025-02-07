@@ -9,31 +9,10 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
-  const captchaRef = useRef(null);
-  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const token = await captchaRef.current.executeAsync();
-
-    if (!token) {
-      setError("Please complete the reCAPTCHA");
-      return;
-    }
-
-    // const result = await sendMail(token, formData);
-    // if (result) {
-    //   alert("Message sent successfully");
-    // } else {
-    //   alert("Failed to send message");
-    // }
-    // captchaRef.current.reset();
   };
 
   return (
@@ -99,12 +78,7 @@ export default function ContactForm() {
             required
           ></textarea>
         </div>
-        <ReCAPTCHA
-          sitekey="6LfbdbMqAAAAANmpapdHyl1IuDwAprf4lFnCh2hq" // Replace with your Site Key
-          ref={captchaRef}
-          size="invisible"
-        />
-        {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+
         <div className="inline-flex flex-column items-start  jusitfy-start">
           <input type="checkbox" required className="mr-1" />
           <p>
