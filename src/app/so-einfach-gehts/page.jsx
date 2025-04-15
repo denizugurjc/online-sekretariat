@@ -2,6 +2,7 @@ import H1 from "@/components/H1";
 import H2 from "@/components/H2";
 import Hr from "@/components/Hr";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const page = () => {
@@ -35,9 +36,11 @@ const page = () => {
         </ol>
       </div>
       <div className="flex justify-center mt-8">
-        <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 mb-4 md:mb-0 rounded shadow-lg w-100 h-16 transition duration-300 ease-in-out transform hover:scale-105">
-          Brief bestellen
-        </button>
+        <Link href="/anfrage">
+          <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 mb-4 md:mb-0 rounded shadow-lg w-100 h-16 transition duration-300 ease-in-out transform hover:scale-105">
+            Brief bestellen
+          </button>
+        </Link>
       </div>
       <div>
         <H1>Zahlungsmöglichkeiten</H1>

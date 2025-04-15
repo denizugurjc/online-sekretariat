@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Hr from "../components/Hr";
 import H1 from "@/components/H1";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -71,9 +72,11 @@ export default function Home() {
         </div>
       </section>
       <div className="flex justify-end my-4">
-        <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded shadow-lg w-32 h-20 transition duration-300 ease-in-out transform hover:scale-105">
-          Bestellen
-        </button>
+        <Link href="/anfrage">
+          <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded shadow-lg w-32 h-20 transition duration-300 ease-in-out transform hover:scale-105">
+            Bestellen
+          </button>
+        </Link>
       </div>
 
       <div className="width-full">

@@ -84,7 +84,7 @@ const page = () => {
           <div className="w-1/2 flex items-center ">
             <p>Homepage</p>
           </div>
-          <span className="ml-2">CHF 290.-</span>
+          <span className="ml-2">ab CHF 350.-</span>
         </div>
       </div>
       <Hr />
@@ -107,7 +107,7 @@ const page = () => {
           Senden Sie uns unverbindlich Ihre Anfrage und erhalten Sie innert 24h
           ein Angebot.
         </p>
-        <Link href="/anfrage/kontakt">
+        <Link href="/anfrage">
           <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
             Anfrage
           </button>

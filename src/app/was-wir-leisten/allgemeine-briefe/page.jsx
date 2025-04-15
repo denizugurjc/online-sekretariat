@@ -1,6 +1,7 @@
 import H1 from "@/components/H1";
 import H2 from "@/components/H2";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const page = () => {
@@ -37,9 +38,11 @@ const page = () => {
           Senden Sie uns unverbindlich Ihre Anfrage und erhalten Sie innert 24h
           Antwort.
         </p>
-        <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-          Anfrage senden
-        </button>
+        <Link href="/anfrage">
+          <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+            Anfrage senden
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -46,6 +46,8 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
+  console.log(pathname, "path");
+
   return (
     <div className=" fixed top-0 left-0 w-full mb-8 z-50">
       {/* Mobile Menu Button */}
@@ -57,7 +59,7 @@ const Navbar = () => {
 
       {/* Sidebar Navigation */}
       <aside
-        className={`bg-gray-200 md:w-64 w-full p-6 fixed h-full transition-transform duration-300 ${
+        className={`bg-gray-200 md:w-64 w-full p-6 fixed h-full flex items-center flex-col transition-transform duration-300 ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 md:block`}
       >
@@ -66,7 +68,11 @@ const Navbar = () => {
           alt="Logo"
           width={200}
           height={200}
-          className="rounded-lg mb-6"
+          className="rounded-lg mb-6 hover:cursor-pointer"
+          onClick={() => {
+            router.push("/");
+            setIsMenuOpen(false);
+          }}
         />
         <nav>
           <ul>
@@ -87,6 +93,7 @@ const Navbar = () => {
                   <ul className="ml-4 mt-2 space-y-2">
                     {link.subRoute.map((subLink) => (
                       <li key={subLink.href}>
+                        {console.log(subLink.href, "sublink")}
                         <a
                           href={subLink.href}
                           className={`block cursor-pointer ${

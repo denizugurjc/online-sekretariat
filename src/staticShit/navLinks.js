@@ -24,7 +24,7 @@ export const navLinks = [
         name: "PERSÖNLICHE ANLIEGEN",
       },
       {
-        href: "/was-wir-leisten/amtliche-korrespond/",
+        href: "/was-wir-leisten/amtliche-korrespond",
         name: "AMTLICHE KORRESPOND.",
       },
     ],
@@ -35,7 +35,7 @@ export const navLinks = [
     name: "SO EINFACH GEHT'S",
     subRoute: [
       {
-        href: "/so-einfach-gehts/ihre-privatsphare/",
+        href: "/so-einfach-gehts/ihre-privatsphare",
         name: "IHRE PRIVATSPHÄRE",
       },
     ],
@@ -45,7 +45,7 @@ export const navLinks = [
     name: "ANFRAGE",
     subRoute: [
       {
-        href: "/anfrage/kontakt/",
+        href: "/anfrage/kontakt",
         name: "KONTAKT",
       },
     ],
